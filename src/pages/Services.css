@@ -1,0 +1,60 @@
+.services-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.page-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/hands.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.page-banner::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #f8f9fa);
+}
+
+.page-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-banner h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-banner p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    padding: 80px 20px;
+    background-attachment: scroll;
+  }
+
+  .page-banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-banner p {
+    font-size: 1.1rem;
+  }
+} 

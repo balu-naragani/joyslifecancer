@@ -1,0 +1,219 @@
+.donors-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding-top: 80px;
+}
+
+.page-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/donate-hands.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.page-banner::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #f8f9fa);
+}
+
+.page-banner h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-banner p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #e74c3c;
+  border-radius: 2px;
+}
+
+.donors-section {
+  padding: 80px 20px;
+}
+
+.donors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.donor-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.donor-card:hover {
+  transform: translateY(-10px);
+}
+
+.donor-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.donor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.donor-card:hover .donor-image img {
+  transform: scale(1.1);
+}
+
+.donor-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.donor-info h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.donor-role {
+  color: #e74c3c;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.donor-company {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.donor-quote {
+  color: #666;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.donate-section {
+  padding: 80px 20px;
+  background: white;
+}
+
+.donate-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.donate-info h3 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.donate-info p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.donation-options {
+  display: grid;
+  gap: 20px;
+}
+
+.donation-option {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.donation-option h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.donation-option p {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.qr-code {
+  text-align: center;
+}
+
+.qr-code img {
+  max-width: 250px;
+  margin-bottom: 15px;
+}
+
+.qr-code p {
+  color: #666;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    padding: 80px 20px;
+    background-attachment: scroll;
+  }
+
+  .page-banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-banner p {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .donate-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .qr-code {
+    order: -1;
+  }
+} 

@@ -1,0 +1,345 @@
+/* Header Styles */
+.header {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top Bar Styles - Reduced Height */
+.top-bar {
+  background-color: #f8f9fa;
+  padding: 5px 5px; /* Reduced padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e9ecef;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-info {
+  display: flex;
+  gap: 15px; /* Reduced gap */
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.contact-info span {
+  font-size: 13px; /* Reduced font size */
+  color: #2c3e50;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap */
+  flex-wrap: nowrap;
+}
+
+.social-links span {
+  font-size: 13px; /* Reduced font size */
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px; /* Reduced size */
+  height: 26px; /* Reduced size */
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px; /* Reduced font size */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Navigation Container - Reduced Height */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5px; /* Reduced padding */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo Styles - Reduced Size */
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 50px; /* Reduced height */
+  width: auto;
+  max-width: 180px; /* Reduced max-width */
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+/* Main Navigation */
+.main-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 20px; /* Reduced gap */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.main-nav li {
+  position: relative;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px; /* Reduced font size */
+  padding: 8px 12px; /* Reduced padding */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 3px; /* Reduced position */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #e74c3c;
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 80%;
+}
+
+/* Donate Button - Reduced Size */
+.donate-button {
+  flex-shrink: 0;
+}
+
+.btn {
+  padding: 8px 20px; /* Reduced padding */
+  text-decoration: none;
+  border-radius: 20px; /* Smaller radius */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-donate {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3); /* Reduced shadow */
+}
+
+.btn-donate:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); /* Reduced shadow */
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px; /* Reduced size */
+  cursor: pointer;
+  color: #2c3e50;
+  padding: 4px; /* Reduced padding */
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 992px) {
+  .main-nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 15px 0; /* Reduced padding */
+  }
+  
+  .main-nav.active ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .main-nav:not(.active) {
+    display: none;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .nav-container {
+    padding: 8px 10px; /* Reduced padding */
+  }
+  
+  .main-nav ul {
+    gap: 15px; /* Reduced gap */
+  }
+  
+  .main-nav a {
+    font-size: 14px;
+    padding: 6px 10px; /* Reduced padding */
+  }
+}
+
+@media (max-width: 992px) {
+  .main-nav ul {
+    gap: 12px; /* Reduced gap */
+  }
+  
+  .main-nav a {
+    font-size: 13px; /* Reduced font size */
+    padding: 6px 8px; /* Reduced padding */
+  }
+  
+  .btn {
+    padding: 7px 18px; /* Reduced padding */
+    font-size: 13px;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+    order: 3;
+  }
+  
+  .nav-container {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 5px 10px; /* Reduced padding */
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .contact-info {
+    gap: 10px; /* Reduced gap */
+    flex-wrap: wrap;
+  }
+  
+  .contact-info span {
+    font-size: 12px; /* Reduced font size */
+  }
+  
+  .social-links {
+    gap: 8px; /* Reduced gap */
+  }
+  
+  .social-links span {
+    font-size: 12px; /* Reduced font size */
+  }
+  
+  .nav-container {
+    padding: 8px 10px; /* Reduced padding */
+  }
+  
+  .logo img {
+    height: 45px; /* Reduced size */
+  }
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+    justify-content: center;
+    gap: 10px; /* Reduced gap */
+    padding: 5px; /* Reduced padding */
+  }
+  
+  .contact-info, .social-links {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .contact-info {
+    order: 1;
+  }
+  
+  .social-links {
+    order: 2;
+  }
+  
+  .nav-container {
+    padding: 6px 5px; /* Reduced padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info span,
+  .social-links span {
+    font-size: 11px; /* Reduced font size */
+  }
+  
+  .social-icon {
+    width: 24px; /* Reduced size */
+    height: 24px; /* Reduced size */
+    font-size: 11px; /* Reduced font size */
+  }
+  
+  .logo img {
+    height: 40px; /* Reduced size */
+  }
+  
+  .btn {
+    padding: 6px 15px; /* Reduced padding */
+    font-size: 11px; /* Reduced font size */
+  }
+}
