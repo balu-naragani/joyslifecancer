@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <h3>Contact Info</h3>
-            <p>📞 90000000</p>
+            <p>📞 6300334632</p>
             <p>✉️ Joyslife.prasu8080@gmail.com</p>
           </div>
         </div>
